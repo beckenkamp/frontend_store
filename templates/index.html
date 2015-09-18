@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FrontEnd Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/main.css" />
+  </head>
+  <body>
+
+  <div class="container">
+    <h1>FrontEnd Store</h1>
+
+    <div class="row">
+      
+      <!-- Main menu -->
+      <div class="col-sm-2" id="main-menu">
+        <ul class="menu list-unstyled">
+          <li><a href="javascript:void(0);" data-get="pedidos"><i class="fa fa-lg fa-shopping-cart pull-left"></i> Pedidos</a></li>
+          <li><a href="javascript:void(0);" data-get="enderecos"><i class="fa fa-lg fa-compass pull-left"></i> Endereços de entrega</a></li>
+          <li><a href="javascript:void(0);" data-get="perfil"><i class="fa fa-lg fa-user pull-left"></i> Perfil</a></li>
+        </ul>
+      </div>
+      
+      <!-- Main content -->
+      <div class="col-sm-10" id="main-content">
+        <!-- dynamically added content -->
+      </div>
+
+    </div>
+  </div>
+    
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="/static/js/mustache.min.js"></script>
+  <script src="/static/js/main.js"></script>
+</html>
