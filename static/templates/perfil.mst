@@ -1,0 +1,13 @@
+<div class="profile">
+    <h2>{{name}}</h2>
+    <dl class="dl-horizontal">
+        <dt>Telefone:</dt>
+        <dd>{{phone}}</dd>
+        <dt>Sexo:</dt>
+        <dd>{{sexo}}</dd>
+        <dt>E-mail</dt>
+        <dd>{{email}}</dd>
+        <dt>CPF</dt>
+        <dd>{{doc}}</dd>
+    </dl>
+</div>

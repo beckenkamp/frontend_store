@@ -32,3 +32,9 @@ body {
     width: 30%;
     padding: 10px;
 }
+
+/* ADDRESSES */
+.address {
+    float: left;
+    width: 49%;
+}

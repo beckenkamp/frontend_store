@@ -1,4 +1,5 @@
 $(document).ready(function() { 
+    render_page('pedidos');
 
     //Capture all clicks on menu items
     $('#main-menu a').on('click', function(){
@@ -7,35 +8,51 @@ $(document).ready(function() {
 
         //gets the function name by the data attribute and executes it
         var get_data = $(this).data('get');
-        self[get_data]();
+        render_page(get_data);
     });
 
 });
 
-//show a list of products
-function pedidos() {
+function page_attributes(page, key, val) {
+    switch(page) {
+        case 'pedidos': 
+            return {code: key, 
+                    title: val.title, 
+                    description: val.description, 
+                    image: val.image}
+            break;
+        case 'enderecos': 
+            return {title: key, 
+                    street: val.street,
+                    number: val.number,
+                    district: val.district,
+                    city: val.street,
+                    state: val.state,
+                    zip_code: val.zip_code}
+            break;
+        case 'perfil': 
+            return {code: key, 
+                    name: val.name, 
+                    phone: val.phone, 
+                    sexo: val.sexo,
+                    email: val.email,
+                    doc: val.doc}
+            break;
+    }
+}
+
+function render_page(page) {
     //gets products and appends to content container
-    $.getJSON('/static/database/produtos.json', function(data) {
+    $.getJSON('/static/database/' + page + '.json', function(data) {
         //clenas content container
         $('#main-content').html("");
 
         $.each(data, function(key, val) {
             //get and render template
-            $.get('/static/templates/pedidos.mst', function(template) {
-            var rendered = Mustache.render(template, {code: key, 
-                                                      title: val.title, 
-                                                      description: val.description, 
-                                                      image: val.image});
-            $('#main-content').append(rendered);
+            $.get('/static/templates/' + page + '.mst', function(template) {
+                var rendered = Mustache.render(template, page_attributes(page, key, val));
+                $('#main-content').append(rendered);
             });
         });
     });
-}
-
-function enderecos() {
-    console.log('enderecos');
-}
-
-function perfil() {
-    console.log('perfil');
 }

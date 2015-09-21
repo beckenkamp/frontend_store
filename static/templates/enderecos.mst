@@ -1,4 +1,8 @@
 <div class="address">
     <h2>{{title}}</h2>
-    <p>{{description}}</p>
+    <p>
+        {{street}}, {{number}}<br>
+        {{district}} - {{city}}, {{state}}<br>
+        CEP {{zip_code}}
+    </p>
 </div>

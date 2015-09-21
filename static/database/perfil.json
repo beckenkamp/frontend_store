@@ -1,1 +1,9 @@
-perfil.json
+{
+    "0" : {
+        "name": "Fulano de Tal",
+        "phone": "(11) 99999-9999",
+        "sexo": "Masculino",
+        "email": "fulano@detal.com",
+        "doc": "033.033.033-22"
+    }
+}

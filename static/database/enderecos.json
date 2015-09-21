@@ -1,1 +1,18 @@
-enderecos.json
+{
+    "Casa": {
+            "street": "Rua das Flores",
+            "number": 222,
+            "district": "Vila Mariana",
+            "city": "São Paulo",
+            "state": "SP",
+            "zip_code": "04333-003"
+        },
+    "Trabalho": {
+            "street": "Rua das Flores",
+            "number": 222,
+            "district": "Vila Mariana",
+            "city": "São Paulo",
+            "state": "SP",
+            "zip_code": "04333-003"
+        }
+}
